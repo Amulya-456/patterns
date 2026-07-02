@@ -1,27 +1,32 @@
-num = int(input("Enter a number: "))
+for i in range(4):
+    for j in range(4):
+        print("*", end=" ")
+    print()
 
-temp = num
-count = 0
 
-# Find length of the number
-while temp > 0:
-    count += 1
-    temp //= 10
+for i in range(1,6):
+    for j in range(1,i + 1):
+        print(j, end=" ")
+    print()
 
-temp = num
-sum = 0
+for i in range(1,6):
+    for j in range(1,i + 1):
+        print(i, end=" ")
+    print()
 
-# Separate digits and calculate power
-while temp > 0:
-    digit = temp % 10
-    print("Digit =", digit)
-    sum += digit ** count
-    temp //= 10
+for i in range(1, 6):
+    ch = ord('A')
+    for j in range(i):
+        print(chr(ch), end=" ")
+        ch += 1
+    print() 
 
-print("Sum =", sum)
+for i in range(5, 0, -1):
+    for j in range(i):
+        print("*", end=" ")
+    print()
 
-# Check condition
-if sum == num:
-    print(num, "is an Armstrong Number")
-else:
-    print(num, "is not an Armstrong Number")
+for i in range(6, 1, -1):
+    for j in range(1, i):
+        print(j, end=" ")
+    print()
